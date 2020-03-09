@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1583733835190
+Build-Jdk: 1.8.0_242
+Built-By: chirag
+Bundle-ManifestVersion: 2
+Bundle-Name: Osgi
+Bundle-SymbolicName: org.example.Osgi
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.ttn.bootcamp.Exercises;version="1.0.0"
+Provide-Capability: osgi.service;objectClass:List<String>="com.ttn.bootc
+ amp.Exercises.ClassService",osgi.service;objectClass:List<String>="com.
+ ttn.bootcamp.Exercises.StudentServices"
+Require-Capability: osgi.service;filter:="(objectClass=com.ttn.bootcamp.
+ Exercises.ClassService)";effective:=active,osgi.service;filter:="(objec
+ tClass=com.ttn.bootcamp.Exercises.StudentServices)";effective:=active,o
+ sgi.extender;filter:="(&(osgi.extender=osgi.component)(version>=1.4.0)(
+ !(version>=2.0.0)))",osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Service-Component: OSGI-INF/com.ttn.bootcamp.Exercises.ClassConfiguratio
+ nService.xml,OSGI-INF/com.ttn.bootcamp.Exercises.StudentClassService.xm
+ l,OSGI-INF/com.ttn.bootcamp.Exercises.StudentConsumer.xml
+Tool: Bnd-4.1.0.201810181252
